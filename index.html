@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رای گیری الکترونیکی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>رای گیری مدیریت کامیونیتی ماینکرافت</h1>
+    <form id="voteForm">
+        <label for="voterId">نام شما:</label>
+        <input type="text" id="voterId" required>
+
+        <label for="message">پیام برای کاندید:</label>
+        <input type="text" id="message" required>
+
+        <label for="reason">دلیل شما برای رای دادن به این کاندید:</label>
+        <input type="text" id="reason" required>
+
+        <label for="candidate">کاندید مورد نظر خود را انتخاب کنید:</label>
+        <select id="candidate" required>
+            <option value="">انتخاب کنید</option>
+            <option value="candidate1">استیون کد ۵۴۳</option>
+            <option value="candidate2">دکتر دارک کد ۴۳۲</option>
+            <option value="candidate3">دارک هیرو کد ۲۹۰</option>
+        </select>
+
+        <button type="submit">ارسال رای</button>
+    </form>
+
+    <div class="result" id="resultMessage"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
