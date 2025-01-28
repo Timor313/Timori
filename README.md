@@ -1,54 +1,78 @@
-<header>
+<p align="center">
+  <img src="assets/Sketchware-Pro.png" style="width: 30%;" />
+</p>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+# Sketchware Pro
+[![همکاران GitHub](https://img.shields.io/github/contributors/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/graphs/contributors)
+[![آخرین کامیتهای GitHub](https://img.shields.io/github/last-commit/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/commits/)
+[![آمار سرور Discord](https://img.shields.io/discord/790686719753846785)](http://discord.gg/kq39yhT4rX)
+[![تعداد دانلود‌های کامل](https://img.shields.io/github/downloads/Sketchware-Pro/Sketchware-Pro/total)](https://github.com/Sketchware-Pro/Sketchware-Pro/releases)
+[![حجم مخزن](https://img.shields.io/github/repo-size/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro)
 
-# GitHub Pages
+به Sketchware Pro خوش آمدید! در اینجا می‌تونید کد منبع بسیاری از کلاس‌های Sketchware Pro رو پیدا کنید و مهم‌تر از همه، مکانی رو برای مشارکت در Sketchware Pro داشته باشید.
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+## ساخت برنامه
+برای ساخت برنامه، باید از Gradle استفاده کنید. اکیداً توصیه می‌شود برای بهترین تجربه از Android Studio استفاده کنید.
 
-</header>
+دو نوع بیلد متفاوت با ویژگی‌های مختلف وجود دارد:
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+- `minApi26:` این نوع امکان خروجی گرفتن از پروژه‌ها به صورت AAB و کامپایل کدهای جاوا 1.8, 1.9, 10, و 11 رو پشتیبانی می‌کنه. با این حال، فقط بر روی اندروید 8.0 (O) و بالاتر کار می‌کنه.
+- `minApi21:` این نوع نمی‌تونه خروجی AAB از پروژه‌ها تولید کنه و فقط کدهای جاوا 1.7 رو کامپایل می‌کنه، اما اندروید 5 به بالا رو پشتیبانی می‌کنه.
 
-## Step 1: Enable GitHub Pages
+برای انتخاب نوع بیلد مناسب در Android Studio، از تب Build Variants استفاده کنید یا از فرمان مناسب Gradle استفاده کنید.
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+### نقشه کد منبع
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
+| کلاس         | نقش                                  |
+| ------------- | ------------------------------------ |
+| `a.a.a.ProjectBuilder` | کمکی برای کامپایل کل پروژه    |
+| `a.a.a.Ix`    | مسوول تولید AndroidManifest.xml     |
+| `a.a.a.Jx`    | تولید کدهای منبع فعالیت‌ها          |
+| `a.a.a.Lx`    | تولید کدهای منبع کامپوننت‌ها، مثل لیسنرها |
+| `a.a.a.Ox`    | مسوول تولید فایل‌های XML از لایه‌ها |
+| `a.a.a.qq`    | رجیستری از وابستگی‌های کتابخانه‌های داخلی |
+| `a.a.a.tq`    | مسوول گفت‌وگوی کوییزها در کامپایل |
+| `a.a.a.yq`    | سازماندهی مسیرهای فایل پروژه‌های Sketchware |
 
-### :keyboard: Activity: Enable GitHub Pages
+> [!TIP]
+> همچنین می‌تونید بسته‌ی `mod` رو بررسی کنید که شامل تغییرات بسیاری از مشارکت‌کنندگان هست.
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
+## مشارکت
 
-<footer>
+اگر تمایل دارید به Sketchware Pro کمک کنید، این مراحل رو دنبال کنید:
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+1. این مخزن رو فورک کنید.
+2. تغییرات رو در مخزن فورک شده خود ایجاد کنید.
+3. این تغییرات رو تست کنید.
+4. یه پول ریکوئست در این مخزن ایجاد کنید.
+5. پول ریکوئست شما توسط اعضای مخزن بررسی می‌شه و اگه تأیید بشه، ترکیب می‌شه.
 
----
+ما از هر گونه مشارکتی استقبال می‌کنیم، چه ویژگی‌های بزرگ و چه رفع باگ‌ها، ولی توجه داشته باشید که همه‌ی مشارکت‌ها به دقت بررسی می‌شن.
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+### پیام‌های کامیت
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+وقتی تغییراتی رو در یک یا چند فایل ایجاد می‌کنید، نیاز به کامیت این تغییرات با یک پیام کامیت دارید. در اینجا چند راهنما آوردم:
 
-</footer>
+- پیام کامیت رو کوتاه و دقیق نگه دارید.
+- از یکی از این نوع کامیت‌ها به عنوان پیشوند استفاده کنید:
+  - `feat:` برای یک ویژگی، احتمالاً بهبود چیزی که قبلا وجود داشته.
+  - `fix:` برای رفع یک مشکل، مثل رفع باگ.
+  - `style:` برای ویژگی‌ها و بروزرسانی‌های مربوط به سبک.
+  - `refactor:` برای بازسازی یک بخش خاص از کدبیس.
+  - `test:` برای همه چیز مرتبط با تست.
+  - `docs:` برای همه چیز مرتبط با مستندات.
+  - `chore:` برای نگهداری کد (می‌تونید از ایموجی‌ها برای نمایان کردن نوع کامیت استفاده کنید).
+
+مثال‌ها:
+- `feat: سرعت بخشیدن به کامپایل با تکنیک جدید`
+- `fix: رفع کرش هنگام راه‌اندازی در برخی از تلفن‌ها`
+- `refactor: بازفرمات کد در File.java`
+
+> [!IMPORTANT]
+> اگه می‌خواید ویژگی‌های جدیدی اضافه کنید که نیازی به ویرایش دیگر بسته‌ها نداره، تغییرات خود را در بسته `pro.sketchware` انجام بدید و به ساختار دایرکتوری‌ها و فایل‌ها احترام بگذارید. همچنین، حتی اگر پروژه با کلاس‌های Kotlin به خوبی کامپایل بشه، سعی کنید تغییرات یا افزودنی‌های خود را در Java انجام بدید، مگر در مواردی که واقعاً ضروری باشه.
+
+## کیوبیک تیم 
+
+امیدواریم این مقاله مورد پسندتان باشد
+با ما همراه باشید.
+[Telegram](https://t.me/Cubic_Team)
